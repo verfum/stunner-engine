@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<!-- blockWorldWidth: width of blocks in world units
+     blockWorldHeight: height of blocks in world units
+     blocksX: width of level in blocks 
+     blocksY: height of level in blocks
+     This implies level width is blockWorldWidth*blocksX
+     height is blockWorldHeight*blocksY -->                      
+<level name = "nemesis" ver = 1.0
+     blockWorldWidth = 32.0 blockWorldHeight = 32.0
+     blocksX = 10 blocksY = 8
+     heroShipID = 0 heroStartX = 160 heroStartY = 256>
+
+    <ships>
+        <ship id=0 collisionWidth=32 collisionHeight=32 collisionOffsetX=-16 collisionOffsetY=-16
+                   imageWidth=32 imageHeight=32 imageOffsetX=-16 imageOffsetY=-16 name="The Bast">
+           <graphics>
+               <centre animSpeed=50>
+                  <image file= "..\gfx\stunner\hero_norm.png" />
+                  <image file= "..\gfx\stunner\hero_fwd_1.png" />
+                  <image file= "..\gfx\stunner\hero_fwd_2.png" />
+               </centre>
+               <up animSpeed=100>
+                  <image file= "..\gfx\stunner\hero_fwd_1.png" />
+                  <image file= "..\gfx\stunner\hero_fwd_2.png" />
+               </up>
+           </graphics>
+        </ship>
+    </ships>
+
+    <!-- Gaa -->
+    <mapBlockImages>
+        <image file="..\gfx\stunner\stun00.bmp" />
+        <image file="..\gfx\stunner\stun01.bmp" />
+        <image file="..\gfx\stunner\stun02.bmp" />
+        <image file="..\gfx\stunner\stun03.bmp" />
+        <image file="..\gfx\stunner\stun04.bmp" />
+        <image file="..\gfx\stunner\stun05.bmp" />
+        <image file="..\gfx\stunner\stun06.bmp" />
+        <image file="..\gfx\stunner\stun07.bmp" />
+        <image file="..\gfx\stunner\stun08.bmp" />
+        <image file="..\gfx\stunner\stun09.bmp" />
+        <image file="..\gfx\stunner\stun10.bmp" />
+        <image file="..\gfx\stunner\stun11.bmp" />
+        <image file="..\gfx\stunner\stun12.bmp" />
+        <image file="..\gfx\stunner\stun13.bmp" />
+        <image file="..\gfx\stunner\stun14.bmp" />
+        <image file="..\gfx\stunner\stun15.bmp" />
+        <image file="..\gfx\stunner\stun16.bmp" />
+        <image file="..\gfx\stunner\stun17.bmp" />
+        <image file="..\gfx\stunner\stun18.bmp" />
+        <image file="..\gfx\stunner\stun19.bmp" />
+        <image file="..\gfx\stunner\stun20.bmp" />
+        <image file="..\gfx\stunner\stun21.bmp" />
+        <image file="..\gfx\stunner\stun22.bmp" />
+        <image file="..\gfx\stunner\stun23.bmp" />
+        <image file="..\gfx\stunner\stun24.bmp" />
+        <image file="..\gfx\stunner\stun25.bmp" />
+        <image file="..\gfx\stunner\stun26.bmp" />
+        <image file="..\gfx\stunner\stun27.bmp" />
+        <image file="..\gfx\stunner\stun28.bmp" />
+        <image file="..\gfx\stunner\stun29.bmp" />
+        <image file="..\gfx\stunner\stun30.bmp" />
+        <image file="..\gfx\stunner\stun31.bmp" />
+        <image file="..\gfx\stunner\stun32.bmp" />
+        <image file="..\gfx\stunner\stun33.bmp" />
+        <image file="..\gfx\stunner\stun34.bmp" />
+        <image file="..\gfx\stunner\stun35.bmp" />
+        <image file="..\gfx\stunner\stun36.bmp" />
+        <image file="..\gfx\stunner\stun37.bmp" />
+        <image file="..\gfx\stunner\stun38.bmp" />
+        <image file="..\gfx\stunner\stun39.bmp" />
+        <image file="..\gfx\stunner\stun40.bmp" />
+        <image file="..\gfx\stunner\stun41.bmp" />
+        <image file="..\gfx\stunner\stun42.bmp" />
+        <image file="..\gfx\stunner\stun43.bmp" />
+        <image file="..\gfx\stunner\stun44.bmp" />
+        <image file="..\gfx\stunner\stun45.bmp" />
+        <image file="..\gfx\stunner\stun46.bmp" />
+        <image file="..\gfx\stunner\stun47.bmp" />
+        <image file="..\gfx\stunner\stun48.bmp" />
+        <image file="..\gfx\stunner\stun49.bmp" />
+        <image file="..\gfx\stunner\stun50.bmp" />
+        <image file="..\gfx\stunner\stun51.bmp" />
+        <image file="..\gfx\stunner\stun52.bmp" />
+        <image file="..\gfx\stunner\stun53.bmp" />
+        <image file="..\gfx\stunner\stun54.bmp" />
+        <image file="..\gfx\stunner\stun55.bmp" />
+        <image file="..\gfx\stunner\stun56.bmp" />
+        <image file="..\gfx\stunner\stun57.bmp" />
+        <image file="..\gfx\stunner\stun58.bmp" />
+        <image file="..\gfx\stunner\stun59.bmp" />
+        <image file="..\gfx\stunner\stun60.bmp" />
+        <image file="..\gfx\stunner\stun61.bmp" />
+        <image file="..\gfx\stunner\stun62.bmp" />
+        <image file="..\gfx\stunner\stun63.bmp" />
+        <image file="..\gfx\stunner\stun64.bmp" />
+        <image file="..\gfx\stunner\stun65.bmp" />
+        <image file="..\gfx\stunner\stun66.bmp" />
+        <image file="..\gfx\stunner\stun67.bmp" />
+        <image file="..\gfx\stunner\stun68.bmp" />
+        <image file="..\gfx\stunner\stun69.bmp" />
+        <image file="..\gfx\stunner\stun70.bmp" />
+        <image file="..\gfx\stunner\stun71.bmp" />
+        <image file="..\gfx\stunner\stun72.bmp" />
+        <image file="..\gfx\stunner\stun73.bmp" />
+        <image file="..\gfx\stunner\stun74.bmp" />
+        <image file="..\gfx\stunner\stun75.bmp" />
+        <image file="..\gfx\stunner\stun76.bmp" />
+        <image file="..\gfx\stunner\stun77.bmp" />
+        <image file="..\gfx\stunner\stun78.bmp" />
+        <image file="..\gfx\stunner\stun79.bmp" />
+    </mapBlockImages>
+    <mapBlocks>
+       <block id=0/>
+       <block id=1/>
+       <block id=2/>
+       <block id=3/>
+       <block id=4/>
+       <block id=5/>
+       <block id=6/>
+       <block id=7/>
+       <block id=8/>
+       <block id=9/>
+       <block id=10/>
+       <block id=11/>
+       <block id=12/>
+       <block id=13/>
+       <block id=14/>
+       <block id=15/>
+       <block id=16/>
+       <block id=17/>
+       <block id=18/>
+       <block id=19/>
+       <block id=20/>
+       <block id=21/>
+       <block id=22/>
+       <block id=23/>
+       <block id=24/>
+       <block id=25/>
+       <block id=26/>
+       <block id=27/>
+       <block id=28/>
+       <block id=29/>
+       <block id=30/>
+       <block id=31/>
+       <block id=32/>
+       <block id=33/>
+       <block id=34/>
+       <block id=35/>
+       <block id=36/>
+       <block id=37/>
+       <block id=38/>
+       <block id=39/>
+       <block id=40/>
+       <block id=41/>
+       <block id=42/>
+       <block id=43/>
+       <block id=44/>
+       <block id=45/>
+       <block id=46/>
+       <block id=47/>
+       <block id=48/>
+       <block id=49/>
+       <block id=50/>
+       <block id=51/>
+       <block id=52/>
+       <block id=53/>
+       <block id=54/>
+       <block id=55/>
+       <block id=56/>
+       <block id=57/>
+       <block id=58/>
+       <block id=59/>
+       <block id=60/>
+       <block id=61/>
+       <block id=62/>
+       <block id=63/>
+       <block id=64/>
+       <block id=65/>
+       <block id=66/>
+       <block id=67/>
+       <block id=68/>
+       <block id=69/>
+       <block id=70/>
+       <block id=71/>
+       <block id=72/>
+       <block id=73/>
+       <block id=74/>
+       <block id=75/>
+       <block id=76/>
+       <block id=77/>
+       <block id=78/>
+       <block id=79/>
+    </mapBlocks>
+</level>
