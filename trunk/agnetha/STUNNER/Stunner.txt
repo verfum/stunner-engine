@@ -1,0 +1,114 @@
+Design Brief
+
+
+Working Project Name 	 -   STUNNER
+Design				 -   MIKE & ANDY OAKLEY
+Target Machine(s)    	 -   AMIGA 1200 and CD 32
+Graphic Development Team  -   MIKE & ANDY OAKLEY
+Programmer			 -   (?)
+SFX & Music   		      -   (?)
+Designed and produced for -   TEAM 17
+Project Manager		 -   MARTYN BROWN(?)
+
+
+Type of Game
+
+	The route aim of this game is to design and produce one of the most classiest Shoot-Em-Up's to date while trying to keep it faithful to the arcade style.  The Amiga 1200 and CD32 have been around now for quite a while and the lack of superior games to Amiga 500 is very visable. The lack of a good Shoot-Em-Up completely devoted to the Amiga 1200 and CD32 is non existent and this gap in the market, we believe, can be filled quite snugly with 'Stunner'.
+	The thing that will stand out with 'Stunner' is the use of the very original graphical styled levels and the varied playing views.  
+ The design for Stunner hasn't been a flash in the pan idea, it has been going on for quite a while and it's only just recently that we found it apropriate to forward it to a company, as it has taken a while to come up with the unique level designs and artwork.
+	The character graphics for the game will be in the style of Manga as this would be the most apropriate for the graphic style overall.
+	The music in the game will be very mid-orchestral (a bit like starwing) with a bit of hard rock and dance mixed in. The sound effects will be spoken by a female actress and will be used when things are collected or if you are doing well she will tell you so.
+	Before the game starts a spoken intro will happen (a lot like the beginning of Assassin) this would be best spoken by a male actor with a deep voice (like the guy used in the trailer of videos). But the rest of the game will be very arcady and will flow very smoothly as well ( minimise the waiting around if possible)
+
+Game specs
+
+	As I have written above the game will be designed exclusively for Amiga 1200 and CD32 and so the maximum potential of the machines would be a big asset for the game.
+	The added use of paralaxing backdrops and colours would definately enhance the graphics on the Amiga 1200 compared to it predacessor the Amiga 500, but the graphics could quite easily be converted down if it was required with the minimum of fuss.
+
+	The one big enhancement from the Amiga 500 to the Amiga 1200 would be more alien and fire power on screen while still keeping it running at 50 mhz.
+
+
+Storyline
+  Sometime in the future, the Sun's atmosphere is becoming rapidly unstable and the threat of it exploding is becoming more real than superficial. With the government aware of this they decide to fund a project turned down some years ago that boasted to have the power to create a whole new Solar System, the project's name was 'STUNNER'.
+  Some years later the project (which was well under way) falls into disastrous trouble. All the planets seem to be rebeling against interference from outside. Something had to be done and fast before the new Solar System declares war on Earth, that something was to be the launch of another heavily funded project to build a fully armoured
+
+ space craft with one intent to destroy this 'so-called' Solar System.
+ Good luck....your gonna need it!
+
+Level descriptions (in order)
+
+Greek Planet 
+  Description - A planet designed and constructed solely by scientific historians to try and simulate earth how it was three thousand years ago but with the introduction of modern transport and weaponary. 
+  The planet has recently been inhabited by Greeks (genetically engineered from the past) and with the introduction of powerful weapons they aim to protect what they call their planet.
+  Level view  - Vertically up
+
+Organic Planet
+  Description - A baddly mutated genetic experiment by Earthlings on a human being which was thrown into space where it continues to grow in the solar system.
+  Level view  - Isometric (up and to the right)
+
+Forest planet
+  Description - A genetically engineered planet that has been left to grow on its own free will, but it has become over independant and is now threatening war on Earth itself.
+  Level View  - Horizontal
+
+Water Valley Planet
+  Description - Another genetically engineered planet that has been left to grow by itself and it to has be taught a lesson in manners.  
+  Level View  - Isometric (up and to the right)
+
+Chrome Planet
+  Description - A planet which is made up off all the rubbish from Earth through hundreds of years. A problem has arisin because a piece of , what was believed to be junk , has began to work and its produced an army out of the scrap metal on the planet. Again you must turn off the machine but first you must venture through its army.
+  Level View  - Vertically up
+
+Aquatic Planet
+  Description - A planet made completely of water and an alsortment of genetically engineered water animals has gone mad due to a space bug which has infected all the animals on the planet. Your mission is to destroy the planet and nuke it. 
+  Level View  - Horizontal
+
+Sand Dune Planet
+  Description - A very hot planet this which has been invaded by space pirates and the only way you are going to get it back is to fight for it. Find the leader and kill.
+  Level View  - Isometric (up and to the right)
+
+Jurrasic Planet
+  Description - A meteroite has floated into the galaxy and you must search it for trouble (there is of course but I need some story line  ). The meteroite is made up of fossilised alien bones and rock.
+  Level View  - Vertically up
+
+Mothership
+  Description - The choice has been made that the whole galaxy must be completely wiped out and the only of doing this is to destroy the Mothership which is supporting the fake sun. The only problem is that not a lot of humans agree and they will do anything to stop you from doing your job. The mother ship is a big doughnut shape which is smothered in electrical equipment, glass panels and tubeing. 
+
+Some parts of this level will become very small and you must squeeze your way through tight tunnels before destroying the main generator.
+  Level View  - Vertically up (maybe bend like in Axelay).
+ 
+Project Duration
+ GREEKLEVEL              
+
+SUBJECT        SIZE       SIZE overall	      AMOUNT of days
+		  in pixels      				     to do
+
+MAPBLOCKS- 512 MAXIMUM    512         MPBLKS    14 
+ALIENS-    10*4 ANIMS      40 32*32   FRAMES     7
+EXPLOSIONS    8 ANIMS       8 32*32   FRAMES    .5       
+END BADDIE    4 ANIMS	 128 128*128 FRAMES     2  
+MAIN SHIP     3 ANIMS	   3 32*32   FRAMES    .75 -|   *
+FONT                       26 8*8     FRAMES    .10  |-1 *
+GET READY    			   1         FRAME     .15 _|   *
+FIREPOWER    10 ANIMS      10 32*32   FRAMES    .5       *
+COLLECTABLES 13 ANIMS      13 16*16   FRAMES    .5       *
+MANGA CHARS   9 ANIMS       9 48*48   FRAMES    3        *
+ENERGY BARS   1 		   1 3*8     FRAME     .05      *
+ALIEN FIRE    2 ANIMS       2 8*8     FRAMES    .20
+STGECLR FNT   			  26 16*16   FRAMES    .25      *
+SHIP DSTRTION 8 ANIMS       8 32*32   FRAMES   1.5       *
+MAPPING				                      1.5
+								-------------
+							     TOTAL 32 DAYS 
+								-------------
+* = this has only got to be done once and not for evey level
+
+EACH LEVEL ROUGHLY 26 DAYS-----7.5 MONTHS
+OVERALL THE COMPLETE GAME, GRAPHICALLY SHOULD TAKE 9 MONTHS TO COMPLETE.
+
+
+
+
+
+
+
+
