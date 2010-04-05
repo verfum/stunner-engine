@@ -53,10 +53,13 @@ public:
    // Positive for forward, negative for breaking/reverse.
    void setForwardMovement(double amount);
 
-
    // Potential base class members functions
    void setPos(const WorldPosition& pos);
 
+protected:
+	// Loads the animation frames
+	void loadAnimationArray(Renderer* renderer, TiXmlElement* parentNode,  const std::string& name,
+      std::vector<ImagePtr> &images, int &animSpeed);
 
 private:
    // Methods
@@ -73,7 +76,13 @@ private:
    std::string m_name;
    // Image used
    std::vector<ImagePtr> m_centreImages;
+   std::vector<ImagePtr> m_leftImages;
+   std::vector<ImagePtr> m_rightImages;
+   std::vector<ImagePtr>* m_pCurrentAnimImages;
    int m_centreAnimSpeed;
+   int m_leftAnimSpeed;
+   int m_rightAnimSpeed;
+   int m_currentAnimSpeed;
 
    // Animation
    // ---------
@@ -94,7 +103,7 @@ private:
    double m_imageOffsetX;
    double m_imageOffsetY;
 
-   // 
+   // Up down/left right
    double m_steering;
    double m_forwardMovement;
 
