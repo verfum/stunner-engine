@@ -10,7 +10,10 @@ m_forwardMovement(0),
 m_animationTimeSinceLastFrame(0),
 m_animationFrame(0),
 m_animationState(sasCentre),
-m_centreAnimSpeed(1000)
+m_centreAnimSpeed(1000),
+m_leftAnimSpeed(1000),
+m_rightAnimSpeed(1000),
+m_pCurrentAnimImages(0)
 {
 }
 
@@ -32,23 +35,52 @@ Ship::update(Renderer* renderer, double timePassed)
 void
 Ship::draw(Renderer* renderer)
 {
-	WorldPosition pos(m_pos.getX()+m_imageOffsetX, m_pos.getY()+m_imageOffsetY);
+   // Calculate world position of top left of ship anim frames
+   WorldPosition pos(m_pos.getX()+m_imageOffsetX, m_pos.getY()+m_imageOffsetY);
 
-   if(m_animationState == sasCentre)
+   // Calculate animation state
+   ShipAnimationState animationState;
+   if(m_steering < 0)
    {
-      // Progress frame if necessary
-      if(m_animationTimeSinceLastFrame >= m_centreAnimSpeed)
-      {
-         m_animationFrame++;
-         m_animationTimeSinceLastFrame = 0;
-      }
-
-      // Wrap back to frame 0
-      if(m_animationFrame >= int(m_centreImages.size()))
-         m_animationFrame = 0;
-
-      renderer->drawImage(m_centreImages[m_animationFrame], pos, m_imageWidth, m_imageHeight);
+      animationState = sasLeft;
+      m_pCurrentAnimImages = &m_leftImages;
+      m_currentAnimSpeed = m_leftAnimSpeed;
    }
+   if(m_steering == 0)
+   {
+      animationState = sasCentre;
+      m_pCurrentAnimImages = &m_centreImages;
+      m_currentAnimSpeed = m_centreAnimSpeed;
+   }
+   if(m_steering > 0)
+   {
+      animationState = sasRight;
+      m_pCurrentAnimImages = &m_rightImages;
+      m_currentAnimSpeed = m_rightAnimSpeed;
+   }
+
+   // Reset animation loop params if anim set changes
+   if(animationState != m_animationState)
+   {
+      m_animationState = animationState;
+      m_animationFrame = 0;
+      m_animationTimeSinceLastFrame = 0;
+   }
+
+   // Progress frame?
+   if(m_animationTimeSinceLastFrame >= m_currentAnimSpeed)
+   {
+      m_animationFrame++;
+      m_animationTimeSinceLastFrame = 0;
+   }
+
+   // Wrap back to frame 0?
+   if(m_animationFrame >= int(m_pCurrentAnimImages->size()))
+      m_animationFrame = 0;
+
+   // Do we have any frames to draw?
+   if(int(m_pCurrentAnimImages->size()) > 0)
+      renderer->drawImage((*m_pCurrentAnimImages)[m_animationFrame], pos, m_imageWidth, m_imageHeight);
 }
 
 void
@@ -59,28 +91,10 @@ Ship::load(Renderer* renderer, TiXmlElement* pShip)
 
    TiXmlElement* pGraphicsNode=hShip.FirstChild( "graphics" ).Element();
 
-   // Get image filenames
-   TiXmlHandle hGraphics(0);
-   hGraphics=TiXmlHandle(pGraphicsNode);
-
-   TiXmlElement* pCentreNode=hGraphics.FirstChild( "centre" ).FirstChild().Element();
-
-   // Image FPS
-   TiXmlElement* poo = pGraphicsNode=hShip.FirstChild( "graphics" ).FirstChild().Element();
-   poo->Attribute("animSpeed", &m_centreAnimSpeed);
-
-   for( pCentreNode; pCentreNode; pCentreNode=pCentreNode->NextSiblingElement())
-   {
-      // Get image filename
-      const char *pImageFileName = pCentreNode->Attribute("file");
-      std::string filename(pImageFileName);
-
-      // Create image
-      ImagePtr image(renderer->createImage(filename));
-      
-      // Store image
-      m_centreImages.push_back(image);
-   }
+   // Get 'centre' anim frames
+   loadAnimationArray(renderer, pGraphicsNode, "centre", m_centreImages, m_centreAnimSpeed);
+   loadAnimationArray(renderer, pGraphicsNode, "left", m_leftImages, m_leftAnimSpeed);
+   loadAnimationArray(renderer, pGraphicsNode, "right", m_rightImages, m_rightAnimSpeed);
 
    // Image position in world units
    // -----------------------------
@@ -107,4 +121,31 @@ void
 Ship::setForwardMovement(double amount)
 {
    m_forwardMovement = amount;
+}
+
+void
+Ship::loadAnimationArray(Renderer* renderer, TiXmlElement* parentNode, const std::string& name, std::vector<ImagePtr> &images, int &animSpeed)
+{
+   // Get image filenames
+   TiXmlHandle hGraphics(0);
+   hGraphics=TiXmlHandle(parentNode);
+
+   // Get anim speed
+   hGraphics.FirstChild(name.c_str()).Element()->Attribute("animSpeed", &animSpeed);
+
+   // Get images
+   TiXmlElement* pCentreNode=hGraphics.FirstChild( name.c_str() ).FirstChild().Element();
+
+   for( pCentreNode; pCentreNode; pCentreNode=pCentreNode->NextSiblingElement())
+   {
+      // Get image filename
+      const char *pImageFileName = pCentreNode->Attribute("file");
+      std::string filename(pImageFileName);
+
+      // Create image
+      ImagePtr image(renderer->createImage(filename));
+      
+      // Store image
+      images.push_back(image);
+   }
 }
