@@ -40,6 +40,12 @@ BlitzUserInterface::getKeyState(const Key& key)
             ret = ksDown;
          break;
 	   }
+      case kFire:
+	   {
+         if(ezKeyDown(32)) // space
+            ret = ksDown;
+         break;
+	   }
          
 
 	/*	
