@@ -54,6 +54,11 @@ Level::update(Renderer* renderer, UserInterface* userInterface, double timePasse
       m_heroShip->setForwardMovement(1.0); // With analogue controllers this might be fractional
    }
 
+   if(userInterface->getKeyState(kFire) == ksDown)
+   {
+      // bullet = m_heroShip->fire();
+   }
+
    // Tell child objects to update themselves
    // ---------------------------------------
    m_heroShip->update(renderer, timePassed);
@@ -73,6 +78,7 @@ Level::draw(Renderer* renderer)
          renderer->drawImage(m_images[id]->m_image, WorldPosition(worldX,worldY), m_blockWorldWidth, m_blockWorldHeight);
       }
    }
+
    // Hero ship
    // Has to be drawn here to get correct z-pos between level gfx
    if(m_heroShip)

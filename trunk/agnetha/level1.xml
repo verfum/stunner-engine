@@ -37,6 +37,22 @@
         </ship>
     </ships>
 
+    <weapons>
+       <weapon id = 0 collisionWidth=8 collisionHeight=8 collisionOffsetX=-4 collisionOffsetY=-4
+                   imageWidth=32 imageHeight=32 imageOffsetX=-16 imageOffsetY=-16 name="Gun 1"
+                   type="bullet" damage=2>
+          <graphics>
+             <fire animSpeed=50>
+             </fire>
+             <move animSpeed=50>
+             </move>
+             <hit animSpeed=50>
+             </hit>
+          </graphics>   
+       </weapon>
+       
+    </weapons>
+
     <!-- Gaa -->
     <mapBlockImages>
         <image file="..\gfx\stunner\stun00.bmp" />
