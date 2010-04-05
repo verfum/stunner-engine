@@ -23,6 +23,16 @@
                   <image file= "..\gfx\stunner\hero_fwd_1.png" />
                   <image file= "..\gfx\stunner\hero_fwd_2.png" />
                </up>
+               <left animSpeed=50>
+                  <image file= "..\gfx\stunner\hero_left_norm.png" />
+                  <image file= "..\gfx\stunner\hero_left_1.png" />
+                  <image file= "..\gfx\stunner\hero_left_2.png" />
+               </left>
+               <right animSpeed=50>
+                  <image file= "..\gfx\stunner\hero_right_norm.png" />
+                  <image file= "..\gfx\stunner\hero_right_1.png" />
+                  <image file= "..\gfx\stunner\hero_right_2.png" />
+               </right>
            </graphics>
         </ship>
     </ships>
