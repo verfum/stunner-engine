@@ -214,6 +214,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Bullet.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Entity.cpp"
 				>
 			</File>
@@ -277,6 +281,10 @@
 			</File>
 			<File
 				RelativePath=".\BlitzUserInterface.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Bullet.h"
 				>
 			</File>
 			<File
