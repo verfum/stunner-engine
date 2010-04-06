@@ -33,7 +33,7 @@ public:
    // Accessors
 
    // Operators
-   //Level& operator=(const Level& other);
+
    // Draw all things
    void draw(Renderer* renderer);
    // Update things given the time passed in milliseconds
@@ -55,6 +55,21 @@ public:
 
    // Potential base class members functions
    void setPos(const WorldPosition& pos);
+
+   // ! This needs to use its current Weapon to create a Bullet
+   // The Weapon will contain the images and pass the image pointers
+   // to the Bullet, along with other params and initial position
+   // (based on this Ship's (T)urret position. Should Turret be
+   // a class, with relative position to current Ship?
+   // Bullet fire();
+
+   // We need this.
+   // ! What happens if this is changed and bullets that have
+   // images created from the previous weapon still exist?
+   // Does blitz have an image garbage collection, does it
+   // recognise that the same URL used in LoadImage is being
+   // used again and therefore not load again?
+   // void setWeapon(Weapon weapon);
 
 protected:
 	// Loads the animation frames
