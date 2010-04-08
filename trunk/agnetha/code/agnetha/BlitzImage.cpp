@@ -30,6 +30,7 @@ BlitzImage::~BlitzImage()
    {
       ezRelease(m_image);
       ezGCCollect();
+      m_image = -1;
    }
 }
 
