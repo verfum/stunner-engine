@@ -24,6 +24,11 @@ void ezDrawText(char*,float,float);
 int ezImageWidth(int);
 int ezImageHeight(int);
 
+// Memory management
+void ezRelease(int);
+int ezGCMemAlloced();
+int ezGCCollect();
+
 void ezSetScale(float, float);
 void ezSetMaskColor(int, int, int);
 void ezSetAlpha(float);
