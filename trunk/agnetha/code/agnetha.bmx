@@ -20,6 +20,11 @@ Global ezRegisterDrawImage(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterDrawImag
 Global ezRegisterImageWidth(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterImageWidth")
 Global ezRegisterImageHeight(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterImageHeight")
 
+' Memory management
+Global ezRegisterGCMemAlloced(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterGCMemAlloced")
+Global ezRegisterGCCollect(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterGCCollect")
+Global ezRegisterRelease(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterRelease")
+
 Global ezRegisterSetScale(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterSetScale")
 Global ezRegisterSetMaskColor(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterSetMaskColor")
 Global ezRegisterSetAlpha(fp:Byte Ptr)=getprocaddress(ezLib,"ezRegisterSetAlpha")
@@ -56,6 +61,11 @@ ezRegisterCls(Cls)
 ezRegisterFlip(Flip)
 ezRegisterKeyHit(KeyHit)
 ezRegisterKeyDown(KeyDown)
+
+'Memory
+ezRegisterGCMemAlloced(GCMemAlloced)
+ezRegisterGCCollect(GCCollect)
+ezRegisterRelease(ezRelease)
 
 'Mouse
 ezRegisterMouseX(MouseX)
@@ -102,6 +112,10 @@ ezRegisterReadString(ezReadString)
 
 Function ezGraphics( a:Int, b:Int )
 	Graphics a, b
+End Function
+
+Function ezRelease( a:Int )
+	Release a
 End Function
 
 Function ezDrawText(a:Byte Ptr, b:Float, c:Float)
@@ -162,17 +176,7 @@ Function ezReadString:Byte Ptr(a:Int, b:Int)
 	Return str
 End Function
 
-'Graphics 640, 480
+' Do it!
 ezRunApp
 
-' Run the game/app
-'While Not KeyHit(27) 
-   'Cls
-   'Font_Head1 = LoadImageFont("Graphics\CENTURY.TTF", 42)', BOLDFONT + SMOOTHFONT )
-   'SetImageFont( Font_Head1 )
-   'DrawText("gaa", 50,50)
-
-    
-   'Flip
-'Wend
 End

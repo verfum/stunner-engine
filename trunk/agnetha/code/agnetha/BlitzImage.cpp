@@ -26,6 +26,11 @@ BlitzImage::BlitzImage(const std::string& filename)
 
 BlitzImage::~BlitzImage()
 {
+   if(m_image != -1)
+   {
+      ezRelease(m_image);
+      ezGCCollect();
+   }
 }
 
 int

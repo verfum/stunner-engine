@@ -45,6 +45,12 @@ extern "C"{EZSHARE_API void _cdecl ezRegisterWriteString(int* func);}
 extern "C"{EZSHARE_API void _cdecl ezRegisterReadString(int* func);}
 
 extern "C"{EZSHARE_API void _cdecl ezRegisterSetBlend(int* func);}
+
+// Memory management
+extern "C"{EZSHARE_API void _cdecl ezRegisterRelease(int* func);}
+extern "C"{EZSHARE_API void _cdecl ezRegisterGCMemAlloced(int* func);}
+extern "C"{EZSHARE_API void _cdecl ezRegisterGCCollect(int* func);}
+
 #define SOLIDBLEND 1
 #define MASKBLEND 2
 #define ALPHABLEND 3
@@ -92,6 +98,12 @@ int (*varReadInt)(int);
 void (*varWriteString)(int, char*);
 char* (*varReadString)(int, int);
 
+// Memory management
+void (*varRelease)(int);
+int (*varGCMemAlloced)();
+int (*varGCCollect)();
+
+
 // For now use this wrapper so other classes can directly call Blitz functions
 int ezGraphics(int a, int b){return varGraphics(a,b);}
 void ezCls(){varCls();}
@@ -128,6 +140,12 @@ int ezReadStream(char* a){return varReadStream(a);}
 void ezCloseStream(int a){return varCloseStream(a);}
 void ezWriteInt(int a, int b){varWriteInt(a,b);}
 int ezReadInt(int a){return varReadInt(a);}
+
+// Memory management
+void ezRelease(int a){varRelease(a);}
+int ezGCMemAlloced(){return varGCMemAlloced();}
+int ezGCCollect(){return varGCCollect();}
+
 
 // For some reason blitz needs to know the length of the string before it reads it, so have to save the length first.
 void ezWriteString(int stream, char* b)
@@ -182,3 +200,8 @@ void ezRegisterReadInt(int* func){varReadInt = (int (*) (int)) func;}
 
 void ezRegisterWriteString(int* func){varWriteString = (void (*) (int,char*)) func;}
 void ezRegisterReadString(int* func){varReadString = (char* (*) (int,int)) func;}
+
+// Memory management
+void ezRegisterRelease(int* func){varRelease = (void (*) (int)) func;}
+void ezRegisterGCMemAlloced(int* func){varGCMemAlloced = (int (*) ()) func;}
+void ezRegisterGCCollect(int* func){varGCCollect = (int (*) ()) func;}
