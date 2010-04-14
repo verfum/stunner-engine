@@ -12,7 +12,14 @@
 
     <ships>
         <ship id="0" collisionWidth="32" collisionHeight="32" collisionOffsetX="-16" collisionOffsetY="-16"
-                   imageWidth="32" imageHeight="32" imageOffsetX="-16" imageOffsetY="-16" name="The Bast">
+                   imageWidth="32" imageHeight="32" imageOffsetX="-16" imageOffsetY="-16" name="The Bast"
+                   defaultWeapon="basic gun">
+           <!-- any weapons here are weapons available at creation -->
+           <weapons>
+               <!-- id links to global weapon, ammo -1 means infinite bullets -->
+               <weapon id="basic gun" ammo="-1" /> 
+           </weapons>
+
            <graphics>
                <centre animSpeed="50">
                   <image file= "..\gfx\stunner\hero_norm.png" />
@@ -38,7 +45,7 @@
     </ships>
 
     <weapons>
-       <weapon id = "0" collisionWidth="8" collisionHeight="8" collisionOffsetX="-4" collisionOffsetY="-4"
+       <weapon id="basic gun" defaultAmmo="-1" collisionWidth="8" collisionHeight="8" collisionOffsetX="-4" collisionOffsetY="-4"
                    imageWidth="32" imageHeight="32" imageOffsetX="-16" imageOffsetY="-16" name="Gun 1"
                    type="bullet" damage="2">
           <graphics>
