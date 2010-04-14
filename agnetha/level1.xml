@@ -5,30 +5,30 @@
      blocksY: height of level in blocks
      This implies level width is blockWorldWidth*blocksX
      height is blockWorldHeight*blocksY -->                      
-<level name = "nemesis" ver = 1.0
-     blockWorldWidth = 32.0 blockWorldHeight = 32.0
-     blocksX = 10 blocksY = 8
-     heroShipID = 0 heroStartX = 160 heroStartY = 256>
+<level name = "nemesis" ver = "1.0"
+     blockWorldWidth = "32.0" blockWorldHeight = "32.0"
+     blocksX = "10" blocksY = "8"
+     heroShipID = "0" heroStartX = "160" heroStartY = "256">
 
     <ships>
-        <ship id=0 collisionWidth=32 collisionHeight=32 collisionOffsetX=-16 collisionOffsetY=-16
-                   imageWidth=32 imageHeight=32 imageOffsetX=-16 imageOffsetY=-16 name="The Bast">
+        <ship id="0" collisionWidth="32" collisionHeight="32" collisionOffsetX="-16" collisionOffsetY="-16"
+                   imageWidth="32" imageHeight="32" imageOffsetX="-16" imageOffsetY="-16" name="The Bast">
            <graphics>
-               <centre animSpeed=50>
+               <centre animSpeed="50">
                   <image file= "..\gfx\stunner\hero_norm.png" />
                   <image file= "..\gfx\stunner\hero_fwd_1.png" />
                   <image file= "..\gfx\stunner\hero_fwd_2.png" />
                </centre>
-               <up animSpeed=100>
+               <up animSpeed="100">
                   <image file= "..\gfx\stunner\hero_fwd_1.png" />
                   <image file= "..\gfx\stunner\hero_fwd_2.png" />
                </up>
-               <left animSpeed=50>
+               <left animSpeed="50">
                   <image file= "..\gfx\stunner\hero_left_norm.png" />
                   <image file= "..\gfx\stunner\hero_left_1.png" />
                   <image file= "..\gfx\stunner\hero_left_2.png" />
                </left>
-               <right animSpeed=50>
+               <right animSpeed="50">
                   <image file= "..\gfx\stunner\hero_right_norm.png" />
                   <image file= "..\gfx\stunner\hero_right_1.png" />
                   <image file= "..\gfx\stunner\hero_right_2.png" />
@@ -38,15 +38,15 @@
     </ships>
 
     <weapons>
-       <weapon id = 0 collisionWidth=8 collisionHeight=8 collisionOffsetX=-4 collisionOffsetY=-4
-                   imageWidth=32 imageHeight=32 imageOffsetX=-16 imageOffsetY=-16 name="Gun 1"
-                   type="bullet" damage=2>
+       <weapon id = "0" collisionWidth="8" collisionHeight="8" collisionOffsetX="-4" collisionOffsetY="-4"
+                   imageWidth="32" imageHeight="32" imageOffsetX="-16" imageOffsetY="-16" name="Gun 1"
+                   type="bullet" damage="2">
           <graphics>
-             <fire animSpeed=50>
+             <fire animSpeed="50">
              </fire>
-             <move animSpeed=50>
+             <move animSpeed="50">
              </move>
-             <hit animSpeed=50>
+             <hit animSpeed="50">
              </hit>
           </graphics>   
        </weapon>
@@ -137,85 +137,85 @@
         <image file="..\gfx\stunner\stun79.bmp" />
     </mapBlockImages>
     <mapBlocks>
-       <block id=0/>
-       <block id=1/>
-       <block id=2/>
-       <block id=3/>
-       <block id=4/>
-       <block id=5/>
-       <block id=6/>
-       <block id=7/>
-       <block id=8/>
-       <block id=9/>
-       <block id=10/>
-       <block id=11/>
-       <block id=12/>
-       <block id=13/>
-       <block id=14/>
-       <block id=15/>
-       <block id=16/>
-       <block id=17/>
-       <block id=18/>
-       <block id=19/>
-       <block id=20/>
-       <block id=21/>
-       <block id=22/>
-       <block id=23/>
-       <block id=24/>
-       <block id=25/>
-       <block id=26/>
-       <block id=27/>
-       <block id=28/>
-       <block id=29/>
-       <block id=30/>
-       <block id=31/>
-       <block id=32/>
-       <block id=33/>
-       <block id=34/>
-       <block id=35/>
-       <block id=36/>
-       <block id=37/>
-       <block id=38/>
-       <block id=39/>
-       <block id=40/>
-       <block id=41/>
-       <block id=42/>
-       <block id=43/>
-       <block id=44/>
-       <block id=45/>
-       <block id=46/>
-       <block id=47/>
-       <block id=48/>
-       <block id=49/>
-       <block id=50/>
-       <block id=51/>
-       <block id=52/>
-       <block id=53/>
-       <block id=54/>
-       <block id=55/>
-       <block id=56/>
-       <block id=57/>
-       <block id=58/>
-       <block id=59/>
-       <block id=60/>
-       <block id=61/>
-       <block id=62/>
-       <block id=63/>
-       <block id=64/>
-       <block id=65/>
-       <block id=66/>
-       <block id=67/>
-       <block id=68/>
-       <block id=69/>
-       <block id=70/>
-       <block id=71/>
-       <block id=72/>
-       <block id=73/>
-       <block id=74/>
-       <block id=75/>
-       <block id=76/>
-       <block id=77/>
-       <block id=78/>
-       <block id=79/>
+       <block id="0"/>
+       <block id="1"/>
+       <block id="2"/>
+       <block id="3"/>
+       <block id="4"/>
+       <block id="5"/>
+       <block id="6"/>
+       <block id="7"/>
+       <block id="8"/>
+       <block id="9"/>
+       <block id="10"/>
+       <block id="11"/>
+       <block id="12"/>
+       <block id="13"/>
+       <block id="14"/>
+       <block id="15"/>
+       <block id="16"/>
+       <block id="17"/>
+       <block id="18"/>
+       <block id="19"/>
+       <block id="20"/>
+       <block id="21"/>
+       <block id="22"/>
+       <block id="23"/>
+       <block id="24"/>
+       <block id="25"/>
+       <block id="26"/>
+       <block id="27"/>
+       <block id="28"/>
+       <block id="29"/>
+       <block id="30"/>
+       <block id="31"/>
+       <block id="32"/>
+       <block id="33"/>
+       <block id="34"/>
+       <block id="35"/>
+       <block id="36"/>
+       <block id="37"/>
+       <block id="38"/>
+       <block id="39"/>
+       <block id="40"/>
+       <block id="41"/>
+       <block id="42"/>
+       <block id="43"/>
+       <block id="44"/>
+       <block id="45"/>
+       <block id="46"/>
+       <block id="47"/>
+       <block id="48"/>
+       <block id="49"/>
+       <block id="50"/>
+       <block id="51"/>
+       <block id="52"/>
+       <block id="53"/>
+       <block id="54"/>
+       <block id="55"/>
+       <block id="56"/>
+       <block id="57"/>
+       <block id="58"/>
+       <block id="59"/>
+       <block id="60"/>
+       <block id="61"/>
+       <block id="62"/>
+       <block id="63"/>
+       <block id="64"/>
+       <block id="65"/>
+       <block id="66"/>
+       <block id="67"/>
+       <block id="68"/>
+       <block id="69"/>
+       <block id="70"/>
+       <block id="71"/>
+       <block id="72"/>
+       <block id="73"/>
+       <block id="74"/>
+       <block id="75"/>
+       <block id="76"/>
+       <block id="77"/>
+       <block id="78"/>
+       <block id="79"/>
     </mapBlocks>
 </level>
